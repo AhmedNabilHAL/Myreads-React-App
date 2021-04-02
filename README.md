@@ -8,7 +8,7 @@ This game was built for the Udacity React Nanodegree Program. The purpose of the
 
 ## How to Use the App
 
-- You can run a hosted version of the app at [link](https://www.link.com)
+- You can run a hosted version of the app at [myreads-ahmednabilhal.herokuapp.com/](https://myreads-ahmednabilhal.herokuapp.com/)
 
 - Books are sorted into three categories: Currently Reading, Want to Read and Read
 - To change a book's category or remove a book from the list, click on the green button on the book cover
