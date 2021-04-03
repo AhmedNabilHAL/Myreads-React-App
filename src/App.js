@@ -16,12 +16,13 @@ class BooksApp extends React.Component {
   }
 
   updateShelf(book, shelf){
-    console.log(book);
     BooksAPI.update(book, shelf).then(data => {
-      console.log(data);
       this.setState(prevState => {
         const idx = prevState.books.findIndex(prevStateBook => prevStateBook.id === book.id);
-        if (idx === -1) return { books: prevState.books.concat(book) };
+        if (idx === -1) { 
+          book.shelf = shelf;
+          return { books: prevState.books.concat(book) };
+        }
         prevState.books[idx].shelf = shelf;
         return { books: prevState.books }
       })
@@ -36,8 +37,6 @@ class BooksApp extends React.Component {
   }
 
   render() {
-    console.log(this.state.shelfs.map(shelf =>
-      ({[shelf]: this.state.books.filter(book => book.shelf === shelf)})))
     return (
       <div className="app">
         <Route path='/search' render={() =>
