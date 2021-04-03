@@ -27,7 +27,7 @@ function Book(props){
 }
 
 Book.propTypes = {
-    imageLinks: PropTypes.object.isRequired,
+    imageLinks: PropTypes.object,
     shelf: PropTypes.string,
     title: PropTypes.string.isRequired,
     authors: PropTypes.array,
